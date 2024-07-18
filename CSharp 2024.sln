@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 - Strings", "06 - String
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 - Classes", "07 - Classes\07 - Classes.csproj", "{6BF77E99-8D0E-4573-A785-9E81968E31DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08 - Demo1 - CheckersBoard", "08 - Demo1 - FormsAppDamaTahtasi\08 - Demo1 - CheckersBoard.csproj", "{1E60EBC0-F189-4B78-AA1F-7D6B7EEC146D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{6BF77E99-8D0E-4573-A785-9E81968E31DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BF77E99-8D0E-4573-A785-9E81968E31DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BF77E99-8D0E-4573-A785-9E81968E31DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E60EBC0-F189-4B78-AA1F-7D6B7EEC146D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E60EBC0-F189-4B78-AA1F-7D6B7EEC146D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E60EBC0-F189-4B78-AA1F-7D6B7EEC146D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E60EBC0-F189-4B78-AA1F-7D6B7EEC146D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
