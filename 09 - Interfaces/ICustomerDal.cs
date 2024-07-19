@@ -53,6 +53,24 @@ namespace _09___Interfaces
             Console.WriteLine("Oracle Server Updated");
         }
     }
+    class MySqlServerCustomerDal : ICustomerDal
+    {
+        public void Add()
+        {
+            Console.WriteLine("MySql Server Added");
+        }
+
+        public void Delete()
+        {
+            Console.WriteLine("MySql Server Deleted");
+
+        }
+
+        public void Update()
+        {
+            Console.WriteLine("MySql Server Updated");
+        }
+    }
 
     class CustomerManager
     {

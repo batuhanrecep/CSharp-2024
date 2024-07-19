@@ -13,15 +13,28 @@ namespace _09___Interfaces
         static void Main(string[] args)
         {
             //InterfacesIntro();
+            //Demo();
 
 
+            ICustomerDal[] customerDals = new ICustomerDal[3]
+            {
+                new SqlServerCustomerDal(),
+                new OracleServerCustomerDal(),
+                new MySqlServerCustomerDal()
+            };
 
-            CustomerManager customerManager = new CustomerManager();
-            customerManager.Add(new OracleServerCustomerDal());
-
+            foreach (var customerDal in customerDals)
+            {
+                customerDal.Add();
+            }
 
             Console.ReadLine();
+        }
 
+        private static void Demo()
+        {
+            CustomerManager customerManager = new CustomerManager();
+            customerManager.Add(new OracleServerCustomerDal());
         }
 
         private static void InterfacesIntro()
@@ -29,14 +42,14 @@ namespace _09___Interfaces
             PersonManager manager = new PersonManager();
             //1
             //manager.Add(new Customer{Id = 1, Address = "Ankara", FirstName = "Batu", LastName = "Recep"});
-            
+
             //2
             Customer customer = new Customer { Id = 1, Address = "Ankara", FirstName = "Batuhan", LastName = "Recep" };
-            
-            
-            
 
-            Student student = new Student{ Id = 1, Department = "Computer Science", FirstName = "Ali", LastName = "Demir" };
+
+
+
+            Student student = new Student { Id = 1, Department = "Computer Science", FirstName = "Ali", LastName = "Demir" };
 
 
             manager.Add(customer);
