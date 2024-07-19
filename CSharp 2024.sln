@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 - Inheritance", "11 - In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12 - VirtualMerhods", "12 - VirtualMerhods\12 - VirtualMerhods.csproj", "{1C66E7CD-16C4-4726-BF7B-C6598BD912F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 - AbstractClasses", "13 - AbstractClasses\13 - AbstractClasses.csproj", "{13ECF8A3-5C81-4C6E-B718-B539BAAB42BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{1C66E7CD-16C4-4726-BF7B-C6598BD912F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C66E7CD-16C4-4726-BF7B-C6598BD912F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C66E7CD-16C4-4726-BF7B-C6598BD912F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13ECF8A3-5C81-4C6E-B718-B539BAAB42BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ECF8A3-5C81-4C6E-B718-B539BAAB42BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ECF8A3-5C81-4C6E-B718-B539BAAB42BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ECF8A3-5C81-4C6E-B718-B539BAAB42BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
