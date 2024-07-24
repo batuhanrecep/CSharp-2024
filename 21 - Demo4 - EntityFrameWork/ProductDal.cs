@@ -20,6 +20,15 @@ namespace _21___Demo4___EntityFrameWork
             }
         }
 
+        public List<Product> GetByName(string key)
+        {
+            //With using without waiting garbage collector, we are disposing the object from memory. This happens when block ended
+            using (ECommerceContext context = new ECommerceContext())
+            {
+                return context.Products.Where(p=>p.Name.Contains(key)).ToList();
+            }
+        }
+
         public void Add(Product product)
         {
 

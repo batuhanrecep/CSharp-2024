@@ -73,5 +73,24 @@ namespace _21___Demo4___EntityFrameWork
             LoadProducts();
             MessageBox.Show("Deleted");
         }
+
+        private void SearchProducts(string key)
+        {
+            //First way (against to solid principles)  
+            //Query from collection 
+            //Also C# is key sensitive because of that we are using ToLower
+            //dgwProducts.DataSource = _productDal.GetAll().Where(p=>p.Name.ToLower().Contains(key.ToLower()).ToList();
+
+            //Second way
+            //Query from database
+            var result = _productDal.GetByName(key);
+            dgwProducts.DataSource = result;
+
+        }
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchProducts(tbxSearch.Text);
+        }
+        
     }
 }

@@ -46,6 +46,8 @@
             this.unitPrice = new System.Windows.Forms.Label();
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
             this.dgwProducts = new System.Windows.Forms.DataGridView();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
@@ -53,7 +55,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(656, 425);
+            this.btnDelete.Location = new System.Drawing.Point(613, 382);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 13;
@@ -71,7 +73,7 @@
             this.gbxUpdate.Controls.Add(this.lblUnitPriceUpdate);
             this.gbxUpdate.Controls.Add(this.tbxUnitPriceUpdate);
             this.gbxUpdate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gbxUpdate.Location = new System.Drawing.Point(312, 316);
+            this.gbxUpdate.Location = new System.Drawing.Point(312, 336);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(238, 138);
             this.gbxUpdate.TabIndex = 12;
@@ -146,7 +148,7 @@
             this.gbxAdd.Controls.Add(this.unitPrice);
             this.gbxAdd.Controls.Add(this.tbxUnitPrice);
             this.gbxAdd.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gbxAdd.Location = new System.Drawing.Point(35, 316);
+            this.gbxAdd.Location = new System.Drawing.Point(35, 336);
             this.gbxAdd.Name = "gbxAdd";
             this.gbxAdd.Size = new System.Drawing.Size(238, 138);
             this.gbxAdd.TabIndex = 11;
@@ -215,17 +217,36 @@
             // 
             this.dgwProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducts.Location = new System.Drawing.Point(35, 22);
+            this.dgwProducts.Location = new System.Drawing.Point(35, 40);
             this.dgwProducts.Name = "dgwProducts";
             this.dgwProducts.Size = new System.Drawing.Size(722, 270);
             this.dgwProducts.TabIndex = 10;
             this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
+            // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(613, 348);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbxSearch.TabIndex = 14;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(609, 331);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.TabIndex = 15;
+            this.lblSearch.Text = "Search";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 545);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
@@ -239,6 +260,7 @@
             this.gbxAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -262,6 +284,8 @@
         private System.Windows.Forms.Label unitPrice;
         private System.Windows.Forms.TextBox tbxUnitPrice;
         private System.Windows.Forms.DataGridView dgwProducts;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Label lblSearch;
     }
 }
 
