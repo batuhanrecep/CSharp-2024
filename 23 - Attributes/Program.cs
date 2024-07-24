@@ -22,6 +22,7 @@ namespace _23___Attributes
         }
     }
     [ToTable("Customers")]
+    [ToTable("tblCustomers")]
     class Customer
     {
         public int Id { get; set; }
@@ -46,10 +47,13 @@ namespace _23___Attributes
     }
 
     //Custom Attributes - These are must be inherited from Attribute Class 
+
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
     class RequiredPropertyAttribute : Attribute
     {
 
     }
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     class ToTableAttribute : Attribute
     {
         //With ReSharper
