@@ -35,7 +35,7 @@ namespace _24___Reflection
             Console.WriteLine(methodInfo.Invoke(instance, null));
 
 
-            //With reflection, we can reach the features of an object's (Methods, attributes etc.)
+            //With reflection, we can reach the features of an object's (Methods, attributes etc.)//
             var methods = type.GetMethods();
 
             foreach (var info in methods)
