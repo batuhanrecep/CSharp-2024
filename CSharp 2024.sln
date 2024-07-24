@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21 - Demo4 - EntityFrameWor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22 - Generics", "22 - Generics\22 - Generics.csproj", "{47666621-CADC-4A47-AC18-4FAE49C6DCE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23 - Attributes", "23 - Attributes\23 - Attributes.csproj", "{6EFE3E91-358D-481A-BA2E-F89218971A1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{47666621-CADC-4A47-AC18-4FAE49C6DCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47666621-CADC-4A47-AC18-4FAE49C6DCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47666621-CADC-4A47-AC18-4FAE49C6DCE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EFE3E91-358D-481A-BA2E-F89218971A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EFE3E91-358D-481A-BA2E-F89218971A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EFE3E91-358D-481A-BA2E-F89218971A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EFE3E91-358D-481A-BA2E-F89218971A1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
