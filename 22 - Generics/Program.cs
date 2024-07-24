@@ -10,17 +10,44 @@ namespace _22___Generics
     {
         static void Main(string[] args)
         {
+            Utilities utilities = new Utilities();
+            List<string> result = utilities.BuildList<string>("Ankara", "Adana", "izmir");
 
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+            List<Customer> result2 = utilities.BuildList<Customer>(new Customer{FirstName = "Nil"},new Customer{FirstName = "Su"});
+
+            foreach (var customer in result2)
+            {
+                Console.WriteLine(customer.FirstName);
+            }
+            Console.ReadLine();
+        }
+
+        class Utilities
+        {
+            public List<T> BuildList<T>(params T[] items)
+            {
+                return new List<T>(items);
+            }
+        }
+        interface IEntity
+        {
 
         }
-        class Product
+        class Product : IEntity
         {
 
         }
 
-        class Customer
+        
+        class Customer : IEntity
         {
-            
+            public string FirstName { get; set; }
+
         }
         interface ICustomerDal:IRepository<Customer>
         {
@@ -31,15 +58,16 @@ namespace _22___Generics
         {
             
         }
-
-        interface IRepository<T>
-        {
-            List<T> GetAll();
+        //Interfaces, classes, abstract classes and also methods can be generics
+        interface IRepository<T> where T : class,  IEntity, new() //Generic Constraints  // class means reference type and for value types we are using struct
+        {                                                                                // T must be implemented from IEntity and can be used with new()
+            List<T> GetAll();                                                            
             T Get(int id);
             void Add(T entity);
             void Delete(T entity);
             void Update(T entity);
         }
+
         class CustomerDal : ICustomerDal
         {
             public List<Customer> GetAll()
@@ -102,4 +130,5 @@ namespace _22___Generics
 
         
     }
+
 }
