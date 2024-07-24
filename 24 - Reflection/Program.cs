@@ -10,9 +10,17 @@ namespace _24___Reflection
     {
         static void Main(string[] args)
         {
-            MathOperations mathOperations = new MathOperations(2,3);
-            mathOperations.Sum2();
-            mathOperations.Sum(3,4);
+            //Without Reflection
+            //MathOperations mathOperations = new MathOperations(2,3);
+            //Console.WriteLine(mathOperations.Sum2());
+            //Console.WriteLine(mathOperations.Sum(3,4));
+
+            //Reflection should not use for everything. Its an expensive object. Reflection should use when it needed
+            var type = typeof(MathOperations);
+            MathOperations mathOperations =(MathOperations)Activator.CreateInstance(type,6,7);
+            Console.WriteLine(mathOperations.Sum2());
+            Console.WriteLine(mathOperations.Sum(11,12));
+            Console.ReadLine();
         }
     }
 
