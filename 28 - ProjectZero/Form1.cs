@@ -19,7 +19,64 @@ namespace _28___ProjectZero
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ListCategories();
+            ListProducts();
+        }
 
+        private void ListProducts()
+        {
+            using (EastwindContext context=new EastwindContext())
+            {
+                dgwProduct.DataSource = context.Products.ToList();
+            }
+        }
+        private void ListProductsByCategory(int categoryId)
+        {
+            using (EastwindContext context = new EastwindContext())
+            {
+                dgwProduct.DataSource = context.Products.Where(p => p.CategoryId == categoryId).ToList();
+            }
+        }
+        private void ListCategories()
+        {
+            using (EastwindContext context = new EastwindContext())
+            {
+                cbxCategory.DataSource = context.Categories.ToList();
+                cbxCategory.DisplayMember = "CategoryName";
+                cbxCategory.ValueMember = "CategoryId";
+            }
+        }
+
+        private void cbxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ListProductsByCategory(Convert.ToInt32(cbxCategory.SelectedValue));
+            }
+            catch (Exception exception)
+            {
+               
+            }
+            
+        }
+        private void ListProductsByProductName(string key)
+        {
+            using (EastwindContext context = new EastwindContext())
+            {
+                dgwProduct.DataSource = context.Products.Where(p => p.ProductName.Contains(tbxSearch.Text)).ToList();
+            }
+        }
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string key = tbxSearch.Text;
+            if (string.IsNullOrEmpty(key))
+            {
+                ListProducts();
+            }
+            else
+            {
+                ListProductsByProductName(key);
+            }
         }
     }
 }

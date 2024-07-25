@@ -46,7 +46,7 @@
             this.gbxCategory.Controls.Add(this.cbxCategory);
             this.gbxCategory.Location = new System.Drawing.Point(12, 12);
             this.gbxCategory.Name = "gbxCategory";
-            this.gbxCategory.Size = new System.Drawing.Size(776, 106);
+            this.gbxCategory.Size = new System.Drawing.Size(660, 106);
             this.gbxCategory.TabIndex = 0;
             this.gbxCategory.TabStop = false;
             this.gbxCategory.Text = "List by Category";
@@ -58,6 +58,7 @@
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(261, 21);
             this.cbxCategory.TabIndex = 0;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
             // lblCategory
             // 
@@ -74,7 +75,7 @@
             this.gbxSearch.Controls.Add(this.lblSearch);
             this.gbxSearch.Location = new System.Drawing.Point(12, 133);
             this.gbxSearch.Name = "gbxSearch";
-            this.gbxSearch.Size = new System.Drawing.Size(776, 121);
+            this.gbxSearch.Size = new System.Drawing.Size(660, 121);
             this.gbxSearch.TabIndex = 1;
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "Search by Product Name";
@@ -92,9 +93,9 @@
             // dgwProduct
             // 
             this.dgwProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProduct.Location = new System.Drawing.Point(12, 310);
+            this.dgwProduct.Location = new System.Drawing.Point(12, 275);
             this.dgwProduct.Name = "dgwProduct";
-            this.dgwProduct.Size = new System.Drawing.Size(775, 150);
+            this.dgwProduct.Size = new System.Drawing.Size(660, 185);
             this.dgwProduct.TabIndex = 2;
             // 
             // tbxSearch
@@ -103,12 +104,13 @@
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(261, 20);
             this.tbxSearch.TabIndex = 1;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 523);
+            this.ClientSize = new System.Drawing.Size(684, 478);
             this.Controls.Add(this.dgwProduct);
             this.Controls.Add(this.gbxSearch);
             this.Controls.Add(this.gbxCategory);
